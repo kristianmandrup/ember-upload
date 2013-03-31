@@ -1,0 +1,23 @@
+{
+  "name": "ember-upload",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "File uploads component",
+  "dependencies": {
+    "kelonye/ember": "*"
+  },
+  "development": {
+    "timoxley/assert": "*"
+  },
+  "styles": [
+    "lib/style.css"
+  ],
+  "scripts": [
+    "index.js",
+    "lib/index.js",
+    "lib/upload.js",
+    "lib/drop.js",
+    "lib/input.js",
+    "lib/progress.js"
+  ]
+}

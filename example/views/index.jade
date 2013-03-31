@@ -1,0 +1,25 @@
+!!!5
+html(lang='en')
+
+  head
+    link(href='build/build.css', rel='stylesheet', media='screen')
+
+    :stylus
+      .component.upload.drop
+        text-align center
+        padding 20px 0
+        width 100%
+        border 1px dotted #ddd
+        &.over
+          border 3px dotted #ddd
+
+  body
+
+    script(src='build/build.js')
+    :coffeescript
+      upload = require('ember-upload')('/upload')
+      upload.ProgressView.create().appendTo('body')
+      upload.InputView.create().appendTo('body')
+      u = upload.DropView.create
+        template: Em.Handlebars.compile 'drop zone'
+      u.appendTo('body')
