@@ -8,6 +8,8 @@ module.exports = (U)->
 
     upload: (file)->
 
+      @set 'file', file
+
       to = U.get 'to'
       file.slice = file.slice or file.webkitSlice
 
