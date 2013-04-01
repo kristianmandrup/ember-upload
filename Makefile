@@ -28,7 +28,7 @@ lib:
 lib/%.js: src/%.coffee
 	coffee -bcj $@ $<
 
-lib/style.css: src/style.styl
+lib/%.css: src/%.styl
 	stylus -u nib --compress < $< > $@
 
 test/lib/%.js: test/src/%.coffee

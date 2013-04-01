@@ -18,10 +18,10 @@ Usage
 ```
 .js
 var upload = require('ember-upload')('/upload-path');
-upload.addObserver, 'upload.progress', function(){
+upload.addObserver('upload.progress', function(){
   var progress = this.get('upload.progress');
   console.log(progress);
-}
+});
 
 .hbs
 {{view upload.ProgressView}}
