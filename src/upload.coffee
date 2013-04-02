@@ -18,12 +18,12 @@ module.exports = (U)->
 
       req = @req = new XMLHttpRequest
 
-      #req.onloadstart = @onloadstart.bind @
+      req.onloadstart = @onloadstart.bind @
       req.upload.onprogress = @onprogress.bind @
-      #req.onload = @onload.bind @
+      req.onload = @onload.bind @
       req.onerror = @onerror.bind @
       req.onabort = @onabort.bind @
-      #req.onloadend = @onloadend.bind @
+      req.onloadend = @onloadend.bind @
 
       req.open 'POST', to    
       req.send body
@@ -35,12 +35,14 @@ module.exports = (U)->
       if e.lengthComputable
         progress = e.loaded / e.total * 100
       @set 'progress', progress
-
     onload: (e)->
       @set 'load', true
     onerror: (e)->
       @set 'error', true
+      @destroy()
     onabort: (e)->
       @set 'abort', true
+      @destroy()
     onloadend: (e)->
       @set 'loadend', true
+      @destroy()

@@ -33,6 +33,7 @@ Todo
 ---
 
   - test
+  - filter mime
 
 License
 ---
