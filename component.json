@@ -1,8 +1,12 @@
 {
   "name": "ember-upload",
+  "repo": "kelonye/ember-upload",
   "version": "0.0.1",
   "license": "MIT",
   "description": "File uploads component",
+  "keywords": [
+    "upload"
+  ],
   "dependencies": {
     "kelonye/ember": "*"
   },
