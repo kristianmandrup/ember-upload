@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <link href='/public.css' rel='stylesheet' media='screen'>
+    <style>
+      .component.upload.drop{
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        border: 1px dotted #ddd;
+      }
+      .component.upload.drop.over{
+        border: 3px dotted #ddd;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <script src='/public.js'></script>
+    <script>
+      var upload = require('ember-upload')('/upload');
+      upload.ProgressView.create().appendTo('body');
+      upload.InputView.create().appendTo('body');
+      u = upload.DropView.create({
+        template: Em.Handlebars.compile('drop zone')
+      });
+      u.appendTo('body');
+    </script>
+  </body>
+</html>

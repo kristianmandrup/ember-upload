@@ -1,16 +1,10 @@
 {
   "name": "ember-upload",
   "version": "0.0.1",
-  "license": "MIT",
-  "description": "",
+  "description": "File uploads component",
   "devDependencies": {
-    "nib": "*",
-    "jade": "*",
-    "mocha": "*",
-    "stylus": "*",
     "express": "*",
-    "component": "*",
-    "coffee-script": "*",
-    "mocha-phantomjs": "*"
-  }
+    "component-hooks": "*"
+  },
+  "license": "MIT"
 }

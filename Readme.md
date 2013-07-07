@@ -12,28 +12,22 @@ Example
     
     $ make example
 
-Usage
+Use
 ---
 
-```
-.js
+```javascript
 var upload = require('ember-upload')('/upload-path');
 upload.addObserver('upload.progress', function(){
   var progress = this.get('upload.progress');
   console.log(progress);
 });
+```
 
-.hbs
+```html
 {{view upload.ProgressView}}
 {{view upload.InputView}}
 {{view upload.DropView}}
 ```
-
-Todo
----
-
-  - test
-  - filter mime
 
 License
 ---

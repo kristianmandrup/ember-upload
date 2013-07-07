@@ -1,46 +1,21 @@
-COFFEE = $(shell find src -name "*.coffee" -type f)
-JS = $(COFFEE:src/%.coffee=lib/%.js)
+component = ./node_modules/component-hooks/node_modules/.bin/component
+lib = $(shell find lib)
 
-STYL = $(shell find src -name "*.styl" -type f)
-CSS = $(STYL:src/%.styl=lib/%.css)
-
-TEST_COFFEE = $(shell find test/src -name "*.coffee" -type f)
-TEST_JS = $(TEST_COFFEE:test/src/%.coffee=test/lib/%.js)
-
-# test: build test/lib $(TEST_JS) test/support/index.html
-# 	@mocha-phantomjs -R dot test/support/index.html
-
-build: node_modules components lib $(JS) $(CSS)
-	@component build --dev
+default: node_modules components public
 
 node_modules:
 	@npm install
 
-test/lib:
-	@mkdir -p test/lib
-
 components:
-	@component install --dev
+	@$(component) install --dev
 
-lib:
-	@mkdir -p lib
+public: $(lib)
+	@$(component) build --dev -n $@ -o $@
 
-lib/%.js: src/%.coffee
-	coffee -bcj $@ $<
-
-lib/%.css: src/%.styl
-	stylus -u nib --compress < $< > $@
-
-test/lib/%.js: test/src/%.coffee
-	coffee -bcj $@ $<
-
-test/support/index.html: test/support/index.jade
-	jade < $< --path $< > $@
+example: default
+	@node $@
 
 clean:
-	@rm -rf lib build test/lib test/support/index.html
+	@rm -rf public
 
-example: build
-	@coffee example
-
-.PHONY: clean test example
+.PHONY: clean example
