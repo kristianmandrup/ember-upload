@@ -3,26 +3,32 @@
   <head>
     <link href='/public.css' rel='stylesheet' media='screen'>
     <style>
-      .component.upload.drop{
+      .drop,
+      .progress{
+        display: inline-block;
+      }
+      .drop{
+        width: 90%;
         text-align: center;
-        padding: 20px 0;
-        width: 100%;
+        padding: 42px 0;
         border: 1px dotted #ddd;
       }
-      .component.upload.drop.over{
+      .drop.over{
         border: 3px dotted #ddd;
       }
-      
+      .progress{
+        float: right;
+      }
     </style>
   </head>
   <body>
     <script src='/public.js'></script>
     <script>
-      var upload = require('ember-upload')('/upload');
-      upload.ProgressView.create().appendTo('body');
-      upload.DropView.create({
+      var Upload = require('ember-upload')('/upload');
+      Upload.DropView.create({
         template: Em.Handlebars.compile('upload/drop zone')
       }).appendTo('body');
+      Upload.ProgressView.create().appendTo('body');
     </script>
   </body>
 </html>

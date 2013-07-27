@@ -4,6 +4,7 @@
   "description": "File uploads component",
   "dependencies": {
     "kelonye/ember": "*",
+    "kelonye/ember-progress": "*",
     "component/file-picker": "*"
   },
   "styles": [

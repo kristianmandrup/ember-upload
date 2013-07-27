@@ -16,16 +16,18 @@ Use
 ---
 
 ```javascript
-var upload = require('ember-upload')('/upload-path');
-upload.addObserver('upload.progress', function(){
+var Upload = require('ember-upload')('/upload-path');
+Upload.addObserver('upload.progress', function(){
   var progress = this.get('upload.progress');
   console.log(progress);
 });
 ```
 
 ```html
-{{view upload.ProgressView}}
-{{view upload.DropView}}
+{{view Upload.ProgressView}}
+{{#view Upload.DropView}}
+  Upload or Drop files here
+{{/view}}
 ```
 
 License
