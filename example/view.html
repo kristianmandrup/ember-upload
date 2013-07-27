@@ -20,11 +20,9 @@
     <script>
       var upload = require('ember-upload')('/upload');
       upload.ProgressView.create().appendTo('body');
-      upload.InputView.create().appendTo('body');
-      u = upload.DropView.create({
-        template: Em.Handlebars.compile('drop zone')
-      });
-      u.appendTo('body');
+      upload.DropView.create({
+        template: Em.Handlebars.compile('upload/drop zone')
+      }).appendTo('body');
     </script>
   </body>
 </html>

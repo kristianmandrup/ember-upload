@@ -25,7 +25,6 @@ upload.addObserver('upload.progress', function(){
 
 ```html
 {{view upload.ProgressView}}
-{{view upload.InputView}}
 {{view upload.DropView}}
 ```
 

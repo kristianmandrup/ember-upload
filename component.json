@@ -3,18 +3,18 @@
   "version": "0.0.1",
   "description": "File uploads component",
   "dependencies": {
-    "kelonye/ember": "*"
+    "kelonye/ember": "*",
+    "component/file-picker": "*"
   },
   "styles": [
-    "lib/style.css"
+    "lib/styles/style.css"
   ],
-  "main": "lib/index.js",
+  "main": "lib/scripts/index.js",
   "scripts": [
-    "lib/index.js",
-    "lib/upload.js",
-    "lib/drop.js",
-    "lib/input.js",
-    "lib/progress.js"
+    "lib/scripts/index.js",
+    "lib/scripts/upload.js",
+    "lib/scripts/drop.js",
+    "lib/scripts/progress.js"
   ],
   "license": "MIT"
 }
