@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "File uploads component",
   "devDependencies": {
-    "express": "*",
     "component-hooks": "*"
   },
   "license": "MIT"
