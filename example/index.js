@@ -1,17 +1,20 @@
-var express = require('component-hooks/node_modules/express');
+/**
+  * Module dependencies.
+  */
+var Upload = require('ember-upload')('/upload');
+var DropView = Upload.DropView;
+var ProgressView = Upload.ProgressView;
 
-var app = express();
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.bodyParser());
-app.use(express.static(__dirname + '/../public'));
-app.get('/', function(req, res) {
-  res.sendfile(__dirname + '/view.html');
-});
-app.post('/upload', function(req, res) {
-  var file = req.files.file;
-  res.send(!!!file?200:400);
-});
+// create drop view
 
-app.listen(3000);
-console.log('http://dev:3000');
+DropView
+  .create({
+    template: Em.Handlebars.compile('upload/drop zone')
+  })
+  .appendTo('body');
+
+// create progress view
+
+ProgressView
+  .create()
+  .appendTo('body');

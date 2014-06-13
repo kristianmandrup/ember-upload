@@ -1,21 +1,7 @@
-component = ./node_modules/component-hooks/node_modules/.bin/component
-lib = $(shell find lib)
+example:
+	@$(MAKE) --no-print-directory -C example
 
-default: node_modules components public
+find:
+	@find ckeditor/plugins -type f && find ckeditor/skins -type f
 
-node_modules:
-	@npm install
-
-components:
-	@$(component) install --dev
-
-public: $(lib)
-	@$(component) build --dev -n $@ -o $@
-
-example: default
-	@node $@
-
-clean:
-	@rm -rf public
-
-.PHONY: clean example
+.PHONY: find example

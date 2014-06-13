@@ -1,9 +1,0 @@
-{
-  "name": "ember-upload",
-  "version": "0.0.1",
-  "description": "File uploads component",
-  "devDependencies": {
-    "component-hooks": "*"
-  },
-  "license": "MIT"
-}

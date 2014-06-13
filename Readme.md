@@ -30,6 +30,11 @@ Upload.addObserver('upload.progress', function(){
 {{/view}}
 ```
 
+Todo
+---
+
+X-browser.
+
 License
 ---
 
