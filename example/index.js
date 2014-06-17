@@ -18,3 +18,15 @@ DropView
 ProgressView
   .create()
   .appendTo('body');
+
+// info
+
+Upload.addObserver('upload.progress', function(){
+  var progress = this.get('upload.progress');
+  console.log(progress);
+});
+
+Upload.addObserver('upload.loadend', function(){
+  var event = this.get('upload.loadend.currentTarget.responseText');
+  console.log(event);
+});

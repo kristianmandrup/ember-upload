@@ -26,7 +26,8 @@ app.get('/', function(req, res) {
 
 app.post('/upload', function(req, res) {
   var file = req.files.file;
-  res.send(!!file ? 200: 400);
+  if (!!!file) return res.send(400);
+  res.json('/stored-here.png');
 });
 
 // bind
