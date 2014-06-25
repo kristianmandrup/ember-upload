@@ -1,6 +1,6 @@
 {
   "name": "ember-upload",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "File uploads component",
   "dependencies": {
     "kelonye/ember": "1.2.0",
@@ -8,14 +8,13 @@
     "component/file-picker": "0.2.0"
   },
   "styles": [
-    "lib/styles/style.css"
+    "lib/style.css"
   ],
   "main": "lib/scripts/index.js",
   "scripts": [
-    "lib/scripts/index.js",
-    "lib/scripts/upload.js",
-    "lib/scripts/drop.js",
-    "lib/scripts/progress.js"
+    "lib/index.js",
+    "lib/drop.js",
+    "lib/progress.js"
   ],
   "license": "MIT"
 }
