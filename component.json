@@ -10,7 +10,7 @@
   "styles": [
     "lib/style.css"
   ],
-  "main": "lib/scripts/index.js",
+  "main": "lib/index.js",
   "scripts": [
     "lib/index.js",
     "lib/drop.js",
