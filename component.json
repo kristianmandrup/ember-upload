@@ -14,7 +14,8 @@
   "scripts": [
     "lib/index.js",
     "lib/drop.js",
-    "lib/progress.js"
+    "lib/progress.js",
+    "lib/upload.js"
   ],
   "license": "MIT"
 }
