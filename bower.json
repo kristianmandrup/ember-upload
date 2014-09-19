@@ -1,0 +1,15 @@
+{
+  "name": "ember-upload",
+  "version": "0.0.5",
+  "description": "File uploads component",
+  "main": [
+    "lib/style.css",
+    "lib/index.js"
+  ],
+  "dependencies": {
+    "ember": "^1.2.0",
+    "ember-progress": "^0.0.2",
+    "file-picker": "`0.2.0"
+  },
+  "license": "MIT"
+}
